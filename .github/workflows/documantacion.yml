@@ -9,7 +9,7 @@ jobs:
       - name: Tener copia local del repositorio
         uses: actions/checkout@v4.2.2
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v4.2.2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.x"
       - name: Instalar dependencias
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1.0.0
+      - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_file: docs
           output_dir: pdfs
